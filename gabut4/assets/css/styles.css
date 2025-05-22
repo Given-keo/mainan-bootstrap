@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Pacifico&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap");
+
+.navbar {
+  background-color: rgb(229, 215, 215);
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.navbar-brand {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jumbotron {
+  background-image: url(../img/jumbotron.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.overflow {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  z-index: 2;
+}
+
+.container {
+  position: absolute;
+  z-index: 5;
+}
+
+.title-jum {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jumbotron .btn-jum {
+  background-color: rgb(104, 82, 82);
+}
+
+.why-us {
+  background-color: rgb(229, 215, 215);
+}
+
+.why-us p {
+  font-size: 15px;
+}
+
+.product {
+  background-color: rgb(229, 215, 215);
+}
+
+.product .row .card {
+  max-width: 600px;
+}
+
+.why-us .btn-jum {
+  background-color: rgb(104, 82, 82);
+}
+
+.quotes {
+  background-color: rgb(104, 82, 82);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #fff;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-link {
+    color: #f4b400;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin-top: 15px;
+}
+
+.social-links {
+    margin-top: 10px;
+}

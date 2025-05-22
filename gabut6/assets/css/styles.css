@@ -1,0 +1,46 @@
+nav {
+  position: fixed;
+}
+
+.navbar .nav-item .home {
+  color: #A31D1D;
+}
+
+.jumbo-des {
+  color: #A31D1D;
+}
+
+.jumbotron .btn-jum {
+  background-color: #A31D1D;
+  color: white;
+  font-weight: 600;
+  padding: 6 16px;
+  width: 200px;
+  box-shadow: 5px 5px 5px #A31D1D;
+}
+
+.jumbotron .btn-jum:hover {
+  background-color: #D84040;
+  color: white;
+}
+
+.card {
+  width: 18rem;
+}
+
+.l-about {
+  background-color: #ffdada;
+}
+
+.contact {
+  background-color: #ffdada;
+}
+
+.contact .btn-jum {
+  background-color: #A31D1D;
+  color: white;
+  font-weight: 600;
+  padding: 6 16px;
+  width: 200px;
+  box-shadow: 5px 5px 5px #A31D1D;
+}

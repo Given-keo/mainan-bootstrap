@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f7fa; /* Background warna abu-abu muda */
+}
+
+/* Animasi untuk card muncul */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Styling */
+.card {
+  border-radius: 10px; /* Membuat sudut card lebih membulat */
+  background-color: #ffffff;
+  width: 500px;
+  animation: fadeIn 1s ease-out;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Padding untuk isi card */
+.card-body {
+  padding: 30px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Label form */
+.form-label {
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Input fields dengan transisi pada focus */
+.form-control {
+  border-radius: 5px;
+  padding: 15px; /* Menambahkan padding di dalam input */
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek saat input fokus */
+.form-control:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 10px #378ae3; /* Efek glow hijau */
+  transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* Tombol login dengan animasi saat hover */
+.btn-primary {
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek hover pada tombol */
+.btn-primary:hover {
+  background-color: #378ae3; /* Warna tombol ketika hover */
+  transform: scale(1.05); /* Sedikit membesar */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Bayangan tambahan */
+  cursor: pointer; /* Menambahkan pointer saat hover */
+}
+
+/* Styling untuk container */
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Footer text untuk link daftar */
+.footer-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+
+.footer-text a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}

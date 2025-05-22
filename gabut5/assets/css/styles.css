@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-brand {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jumbotron {
+  background-image: url(../img/jumbotron.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+
+.tentang {
+  background-color: rgb(76, 112, 22);
+}
+
+.tentang p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.img-tentang {
+  background-image: url(../img/tentang.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.kontribusi {
+  background-color: rgb(76, 112, 22);
+}
+
+.img-artikel {
+  background-image: url(../img/artikel.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* .gallery {
+    height: 500px;
+}
+
+.gallery .g1 {
+    background-image: url(../img/g1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .g2 {
+    background-image: url(../img/g2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.gallery .g3 {
+    background-image: url(../img/g3.jpg);
+    background-position: center;
+    background-size: cover;
+} */
+
+.gallery {
+  display: flex;
+  gap: 2em;
+  /* background-color: rgb(76, 112, 22); */
+  overflow: hidden;
+}

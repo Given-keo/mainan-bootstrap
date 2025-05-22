@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply fadeIn animation to all sections */
+section {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Smooth scroll for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover effect for buttons */
+button,
+.btn,
+.nav-link {
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  border-radius: 8px;
+  background-color: #378ae3;
+}
+
+button:hover,
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Efek animasi pada card produk */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Menggeser card ke atas sedikit saat hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); /* Memberikan bayangan lebih besar */
+}
+
+/* Animasi fade-in saat daftar produk muncul */
+.daftar-produk {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animasi pada navbar ketika scroll */
+nav.navbar {
+  transition: background-color 0.3s ease;
+}
+
+nav.navbar.scrolled {
+  background-color: #0056b3; /* Ganti dengan warna yang diinginkan */
+}
+
+/* Tambahan: Efek tombol hover */
+.btn-primary:hover {
+  background-color: #004085; /* Ganti dengan warna yang diinginkan */
+  transform: scale(1.05); /* Membesarkan tombol sedikit */
+}
+
+/* .jumbotron {
+    height: ;
+} */
+
+.jum-img {
+  background-image: url("https://static.angloinfo.com/blogs/files/sites/220/shutterstock_517731061-Editorial-credit-Anton_Ivanov-Shutterstock.com_.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-info {
+  margin-bottom: 10px;
+}
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-social p {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+.footer-social a:hover {
+  color: #ccc;
+}

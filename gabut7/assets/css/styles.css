@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.jum-img {
+  background-image: url("https://static.angloinfo.com/blogs/files/sites/220/shutterstock_517731061-Editorial-credit-Anton_Ivanov-Shutterstock.com_.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1300px) {
+  .tentang .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tentang .col-md-6 {
+    width: 100%;
+  }
+
+  .tentang img {
+    display: none; /* Menyembunyikan gambar pada layar dengan lebar <= 1024px (termasuk iPad dan ponsel) */
+  }
+
+  .tentang p,
+  .tentang h2,
+  .tentang h3,
+  .tentang ul {
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tentang .row {
+    padding: 10px; /* Memberikan padding kecil pada layar yang lebih kecil */
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-info {
+  margin-bottom: 10px;
+}
+.footer-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-social p {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+.footer-social a:hover {
+  color: #ccc;
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply fadeIn animation to all sections */
+section {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Smooth scroll for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover effect for buttons */
+button,
+.btn,
+.nav-link {
+  transition: background-color 0.3s ease;
+}
+
+/* button:hover,
+.btn:hover, */
+.nav-link:hover {
+  transform: scale(1.1);
+  border-radius: 8px;
+  background-color: #378ae3; /* Green color for hover effect */
+}
+
+button:hover,
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Card hover animation */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in effect for images */
+img {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Animate the footer appearance */
+footer {
+  animation: fadeIn 1.5s ease-out 1.5s;
+}
