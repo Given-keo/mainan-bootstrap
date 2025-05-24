@@ -1,2 +1,1 @@
-# mainan-bootstrap
-gabut dengan bootstrap di jam kosong
+This file can be used as a template for your projects or assignments.
