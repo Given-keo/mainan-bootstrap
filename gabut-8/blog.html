@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Impact Bootstrap Template - Blog</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    .img-carousel-fixed {
+      height: 450px;
+      object-fit: cover;
+      transition: transform 8s ease;
+    }
+  
+    .zoom-img:hover {
+      transform: scale(1.05);
+    }
+  
+    .carousel-item {
+      position: relative;
+    }
+  
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.687), rgba(0, 0, 0, 0.5));
+      z-index: 1;
+    }
+  
+    .carousel-caption {
+      position: absolute;
+      z-index: 2;
+      bottom: 20%;
+    }
+  
+    .text-shadow {
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+  
+    .breadcrumb a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: ">";
+    }
+    
+    /* Blog Slider Styles */
+    .blog-slider {
+      position: relative;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    .swiper-slide .posts-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .swiper-pagination-bullet {
+      /* background: #007bff; */
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      /* background: #007bff; */
+      opacity: 1;
+    }
+
+    .blog-pagination {
+      margin-top: 20px;
+    }
+
+    .blog-pagination ul li a {
+      padding: 8px 14px;
+      margin: 0 5px;
+      /* border: 1px solid #007bff;
+      border-radius: 50%; */
+      /* color: #007bff; */
+      text-decoration: none;
+    }
+
+    .blog-pagination ul li.active a {
+      /* background: #007bff; */
+      color: white;
+    }
+
+    /* Remove the previous posts-slide styles */
+    .posts-slide {
+      display: none; /* Remove this as it's no longer needed */
+    }
+
+    .posts-slide.active {
+      display: block; /* Remove this as it's no longer needed */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">kelanaNoesantara@example.com</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Kelana<span> Noesantara.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#gallery">Galeri</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Lainnya</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="blog-details.html">Blog Detail</a></li>
+              <li><a href="#">Something</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="carousel-overlay"></div>
+            <img src="assets/img/blog-img1.jpg" class="d-block w-100 img-carousel-fixed zoom-img" alt="Travel Destination">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4 fw-bold text-shadow">Eksplorasi Nusantara</h1>
+              <p class="lead">Temukan destinasi terbaik untuk liburan impianmu.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-overlay"></div>
+            <img src="assets/img/blog-img2.jpg" class="d-block w-100 img-carousel-fixed zoom-img" alt="Local Cuisine">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4 fw-bold text-shadow">Kuliner Lokal</h1>
+              <p class="lead">Nikmati cita rasa khas daerah dari seluruh penjuru negeri.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-overlay"></div>
+            <img src="assets/img/blog-img3.jpg" class="d-block w-100 img-carousel-fixed zoom-img" alt="Travel Tips">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4 fw-bold text-shadow">Tips Perjalanan</h1>
+              <p class="lead">Saran praktis agar perjalananmu lebih nyaman dan aman.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+      <nav>
+        <div class="container">
+          <ol class="breadcrumb mt-3">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Blog</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+    
+    
+    
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <!-- Swiper Container -->
+        <div class="swiper blog-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="row gy-4 posts-list">
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Travel</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">5 Tempat Tersembunyi di Indonesia yang Wajib Dikunjungi</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Maria Putri</p>
+                        <p class="post-date"><time datetime="2022-01-01">Jan 1, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Food</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">10 Kuliner Khas Jawa Timur yang Menggugah Selera</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Allisa Rachma</p>
+                        <p class="post-date"><time datetime="2022-06-05">Jun 5, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Travel</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Tips Liburan Hemat ke Bali untuk Pemula</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Mark Pratama</p>
+                        <p class="post-date"><time datetime="2022-06-22">Jun 22, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="row gy-4 posts-list">
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Food</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Rahasia Bumbu Sate Madura yang Melegenda</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-4.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Lisa Maulina</p>
+                        <p class="post-date"><time datetime="2022-06-30">Jun 30, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-5.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Travel</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Liburan Seru ke Labuan Bajo Bersama Keluarga</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-5.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Denis Mahendra</p>
+                        <p class="post-date"><time datetime="2022-01-30">Jan 30, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-6.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Food</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Resep Rahasia Gudeg Jogja Autentik</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-6.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Mika Lestari</p>
+                        <p class="post-date"><time datetime="2022-02-14">Feb 14, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="row gy-4 posts-list">
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/dieng.jpeg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Travel</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Eksplorasi Keindahan Alam Dieng yang Menakjubkan</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-7.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Yusuf Rinaldi</p>
+                        <p class="post-date"><time datetime="2022-08-15">Aug 15, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/mkn-sunda.jpeg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Food</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Jelajahi Kuliner Tradisional Sunda yang Otentik</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-8.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Citra Amalia</p>
+                        <p class="post-date"><time datetime="2022-09-02">Sep 2, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/desa.jpeg" alt="" class="img-fluid">
+                    </div>
+                    <p class="post-category">Travel</p>
+                    <h2 class="title">
+                      <a href="blog-details.html">Menyusuri Desa Wisata Penglipuran yang Penuh Kearifan Lokal</a>
+                    </h2>
+                    <div class="d-flex align-items-center">
+                      <img src="assets/img/blog/blog-author-9.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
+                      <div class="post-meta">
+                        <p class="post-author-list">Andi Saputra</p>
+                        <p class="post-date"><time datetime="2022-11-10">Nov 10, 2022</time></p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!-- Custom Pagination -->
+        <div class="blog-pagination">
+          <ul class="justify-content-center">
+            <li class="active"><a href="#" data-slide="0">1</a></li>
+            <li><a href="#" data-slide="1">2</a></li>
+            <li><a href="#" data-slide="2">3</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Kelana Noesantara</span>
+          </a>
+          <p>Menyajikan kisah perjalanan seru dan rekomendasi kuliner terbaik dari berbagai penjuru Nusantara untuk menginspirasi petualangan Anda.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Menu Utama</h4>
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Destinasi</a></li>
+            <li><a href="#">Kuliner</a></li>
+            <li><a href="#">Kontak</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Layanan Kami</h4>
+          <ul>
+            <li><a href="#">Panduan Perjalanan</a></li>
+            <li><a href="#">Review Kuliner</a></li>
+            <li><a href="#">Paket Wisata</a></li>
+            <li><a href="#">Tips & Trik</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Hubungi Kami</h4>
+          <p>
+            Jalan Petualang No.108 <br>
+            Jakarta, Indonesia 12345<br><br>
+            <strong>Telepon:</strong> +62 812 3456 7890<br>
+            <strong>Email:</strong> hello@kelananoesantara.com<br>
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; 2025 <strong><span>Kelana Noesantara</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">Given Ganteng</a>
+      </div>
+    </div>
+  
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Initialize Swiper
+    const blogSlider = new Swiper('.blog-slider', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        slideChange: function () {
+          // Update active pagination
+          document.querySelectorAll('.blog-pagination li').forEach(li => li.classList.remove('active'));
+          document.querySelector(`.blog-pagination li a[data-slide="${this.activeIndex}"]`).parentElement.classList.add('active');
+        },
+      },
+    });
+  
+    // Custom pagination click
+    document.querySelectorAll('.blog-pagination a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const slideIndex = parseInt(this.getAttribute('data-slide'));
+        blogSlider.slideTo(slideIndex);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
